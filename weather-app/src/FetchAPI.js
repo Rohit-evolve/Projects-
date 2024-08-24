@@ -7,6 +7,7 @@ import axios from 'axios'
 import Sun from "./assests/Sun.png"
 import Cloud from "./assests/Cloud.png"
 import Rain from "./assests/Group 17.png"
+import Error from "./assests/404.png"
 
 import "./FetchAPI.css"
 
@@ -42,6 +43,7 @@ export default function FetchAPI({city}) {
         .catch(response => {
             setError(response.message)
             setData(null)
+            setImg(Error)
         })
         
 
