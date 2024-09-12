@@ -10,13 +10,21 @@ import Rain from "./assests/Group 17.png"
 import Error from "./assests/404.png"
 
 import "./FetchAPI.css"
+import "./App.css"
 
 
-export default function FetchAPI({city}) {
+export default function FetchAPI() {
 
     const[data, setData] = useState(null)
     const[error, setError] = useState(null)
     const[img, setImg] = useState(null)
+    const[city, setCity] = useState("")
+
+    const handleSearch = (e) => {
+      e.preventDefault()
+
+       setCity(e.target.value)
+    }
 
     const handleClick =  async(e) =>{
         e.preventDefault()
@@ -53,11 +61,19 @@ export default function FetchAPI({city}) {
   return (
     <div className = "app">
 
-   <form onSubmit = {handleClick}>
+
+      <h1 className = "">Weather App</h1>
+      <div className = "back">
+       <div className = "input-field">
+       <input type = "text"  id="city" value = {city} onChange={handleSearch} placeholder='enter the city name'/>
+      </div>
+    </div>  
+
+   <form onSubmit = {handleClick} className="pt-5">
        
       <img src = {img} alt = "" className="picture"/> <br/>
      
-      <button type = "submit" >Weather</button>
+      <button type = "submit">Weather</button>
 
      </form>
 

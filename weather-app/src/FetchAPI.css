@@ -1,11 +1,12 @@
 /* Center the app content */
-.app {
+/*.app {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
     height : 50%;
+    border: none;
     
   }
   
@@ -13,58 +14,35 @@
   button {
     padding: 5px 5px;
     margin: 5px 0;
-   
-    color: black;
+    font-weight: 500;
+    font-size: 22px;
+    color: rgb(246, 242, 242);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    background: transparent;
+    
+    transition: color 0.3s ease;
+    
   }
   
   button:hover {
-    background-color: #45a049;
+    background: linear-gradient(rgba(178, 205, 245, 0.9), rgba(237, 241, 196, 0.5));
+    color : black;
+    
+    
   }
   
   /* Style for error message */
   p {
-    color: red;
+    color: rgb(243, 234, 234);
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
+    padding-top: 20px;
   }
   
   /* Weather display container */
-  .weather {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .weather .city {
-    font-size: 1.5em;
-    margin: 10px 0;
-  }
-  
-  .weather .temp {
-    font-size: 2em;
-    margin: 10px 0;
-  }
-  
-  .weather .description {
-    font-size: 1.2em;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .weather .details {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .weather .details p {
-    margin: 0;
-    font-size: 1em;
-  }
   
   .picture 
   {
@@ -73,5 +51,7 @@
     padding-bottom: 10px;
     height: 100px;
   }
+
+  
 
  
